@@ -1,0 +1,74 @@
+<section class="flex flex-col h-screen bg-gray-100">
+  <header class="bg-white dark:bg-gray-950 shadow-sm p-4 relative"> <!-- flex items-center -->
+    <!-- fmodificado a relative aunque omitiendolo se ve igual-->
+    <!-- div nuevo -->
+    <!-- Columna izquierda: enlace Inicio -->
+    <div class="absolute left-4 text-left">
+      <h2>
+        <a routerLink=""
+          class="text-black dark:text-white hover:text-blue-800 dark:hover:text-blue-400 transition-colors font-medium text-xl">
+          ← Inicio
+        </a>
+      </h2>
+    </div>
+
+    <!-- Columna central: título -->
+    <!-- div nuevo -->
+    <div class="text-center">
+      <h1 class="text-2xl font-semibold dark:text-white">Chat Component</h1> <!-- eliminado text-center -->
+    </div>
+
+    <!-- Columna derecha: botón de modo oscuro -->
+    <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+      <button (click)="toggleDarkMode()"
+        id="theme-toggle"
+        class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <!-- Icono sol (visible en modo oscuro) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800 dark:text-yellow-300 hidden dark:block"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Icono luna (visible en modo claro) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800 dark:text-yellow-300 block dark:hidden"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow p-4 flex justify-center items-center">
+    <article class="bg-white shadow-md rounded-lg w-full max-w-md overflow-hidden">
+      <!-- Área de mensajes -->
+      <ul class="p-4 space-y-3 max-h-80 overflow-y-auto">
+        <!-- Mensaje del usuario -->
+        <li class="flex justify-start">
+          <span class="bg-gray-200 p-3 rounded-lg max-w-[80%]">
+            Mensaje del usuario
+          </span>
+        </li>
+
+        <!-- Mensaje del asistente -->
+        <li class="flex justify-end">
+          <span class="bg-blue-200 p-3 rounded-lg max-w-[80%]">
+            Respuesta del asistente
+          </span>
+        </li>
+      </ul>
+
+      <!-- Formulario de entrada -->
+      <footer class="border-t p-3">
+        <form class="flex">
+          <input type="text"
+            class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+            placeholder="Escribe tu mensaje..." aria-label="Mensaje">
+          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-r-lg transition-colors">
+            Enviar
+          </button>
+        </form>
+      </footer>
+    </article>
+  </main>
+</section>
