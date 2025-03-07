@@ -9,4 +9,9 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
 
+  toggleDarkMode(){
+    document.documentElement.classList.toggle('dark');
+  }
+
+
 }
