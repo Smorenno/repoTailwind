@@ -1,12 +1,13 @@
 
-<nav class=" bg-black text-white  whitespace-nowrap ">
+<nav class=" bg-amber-100   whitespace-nowrap dark:bg-black dark:">
     <ul class="flex  justify-start items-center p-2 space-x-14 text-xl font-bold ">
         <li><img src="/logo.jpg" class="w-20 rounded-full"></li>
         <li>Inicio</li>
         <li>Sobre nosotros</li>
         <li>Contacto</li>
         <li>
-            <button>Cambiar modo</button>
+            <button (click)="toggleDarkMode()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg" >
+                Cambiar modo</button>
         </li>
     </ul>
 </nav>
@@ -22,19 +23,19 @@
 
 </section>
 
-<section class="flex justify-center items-center flex-col bg-black">
-    <h1 class="text-xl"> ¿Porque nosotros?</h1>
-    <p> Tenemos variedad de cursos sobre cuaquier franework y lenguaje disponible</p>
+<section class="flex justify-center items-center flex-col">
+    <h1 class="text-xl"> ¿Por qué nosotros?</h1>
+    <p> Tenemos variedad de cursos sobre cuaquier framework y lenguaje disponible</p>
 
 
-    <div class=" pt-5 grid grid-cols-3  bg-red-700 w-full ">
-        <div class="col-span-3">
+    <div class=" pt-5 grid grid-cols-3 gap-8  w-200 p-3">
+        <div class="flex justify-center items-center bg-gray-500 p-4 rounded-2xl">
             <img src="/logo-angular.png" class="w-32">
         </div>
-        <div class="col-span-3">
+        <div class="flex justify-center items-center bg-gray-500 p-4 rounded-2xl">
             <img src="/React-logo.png" class="w-32">
         </div>
-        <div class="col-span-3">
+        <div class="flex justify-center items-center bg-gray-500 p-4 rounded-2xl">
             <img src="vuejs-logo.png" class="w-32">
         </div>
     </div>

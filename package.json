@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "storybook": "ng run tailWindTuto:storybook",
+    "build-storybook": "ng run tailWindTuto:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +20,7 @@
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
-    "@tailwindcss/postcss": "^4.0.9",
+    "@tailwindcss/postcss": "^4.0.11",
     "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.0.9",
@@ -29,6 +31,15 @@
     "@angular-devkit/build-angular": "^19.1.6",
     "@angular/cli": "^19.1.6",
     "@angular/compiler-cli": "^19.1.0",
+    "@chromatic-com/storybook": "^3.2.5",
+    "@compodoc/compodoc": "^1.1.26",
+    "@storybook/addon-docs": "^8.6.4",
+    "@storybook/addon-essentials": "^8.6.4",
+    "@storybook/addon-interactions": "^8.6.4",
+    "@storybook/addon-onboarding": "^8.6.4",
+    "@storybook/angular": "^8.6.4",
+    "@storybook/blocks": "^8.6.4",
+    "@storybook/test": "^8.6.4",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
@@ -36,6 +47,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "storybook": "^8.6.4",
     "typescript": "~5.7.2"
   }
 }
